@@ -10,12 +10,11 @@ def convert_to_gs(img_open_path: str, img_save_path: str):
     :param img_save_path: path to save the result
     :return:
     """
-    img = Image.open(img_open_path).convert('LA')
+    img = Image.open(img_open_path).convert('L')
     img.save(img_save_path)
 
 
 if __name__ == '__main__':
-    print(pathlib.Path().resolve())
     open_ = str(pathlib.Path().resolve()) + r"\images\corgi.jpg"
     save_ = str(pathlib.Path().resolve()) + r"\images\corgi_gs.png"
     convert_to_gs(open_, save_)
