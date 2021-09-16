@@ -20,7 +20,7 @@ class Picture:
         self.image = self.image.resize(new_size)
 
     def thumbnail_resize(self, new_size: tuple) -> None:
-        """ Resize image and keeping it aspect ratios"""
+        """ Resize image and keep it aspect ratios"""
         self.image.thumbnail(new_size)
 
     def crop(self, box: tuple) -> None:
